@@ -6,8 +6,8 @@ namespace webapiputgotcha.Controllers
     [Route("api/[controller]")]
     public class WorksController : Controller
     {
-        [HttpPut]
-        public string Put([FromRoute] int id, object company)
+        [HttpPut("{id}")]
+        public string Put([FromRoute] int id, [FromBody] object company)
         {
             return id + " was the parameter.";
         }
